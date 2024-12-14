@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .neon {
+    @apply rounded-full border border-verde-200 bg-gradient-to-b from-verde-200 to-verde-400;
+    box-shadow: 0 1px 4px 1px theme(colors.verde.200 / 25%),
+      inset 0px -1px 2px theme(colors.verde.200);
+  }
+
+  .btn {
+    @apply rounded-full border border-verde-200 bg-gradient-to-b from-verde-200 to-verde-400 px-5 py-2 text-verde-900 transition hover:contrast-200;
+    box-shadow: 0 1px 4px 1px theme(colors.verde.200 / 25%),
+      inset 0px -1px 2px theme(colors.verde.200);
+  }
+
+  .input {
+    @apply rounded-md border-2 border-verde-800 bg-verde-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-verde-400 focus:border-verde-900 placeholder:text-verde-900;
+  }
+
+  .radial-gradient {
+    background-image: radial-gradient(
+      50% 100% at 50% 0%,
+      theme(colors.verde.700) 0%,
+      theme(colors.verde.800) 100%
+    );
+  }
+}
